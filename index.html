@@ -13,7 +13,7 @@
                 <img src="./img/cute_mice.jpg" class="img" alt="">
             </td>
             <td>
-                <img src="https://cdn.pixabay.com/photo/2022/11/15/11/04/design-7593741__340.jpg" class="img-bg" alt="">
+                <div style="background-image: url('https://cdn.pixabay.com/photo/2022/11/15/11/04/design-7593741__340.jpg'); height: 100px;"></div>
             </td>
         </tr>
       
@@ -48,6 +48,7 @@
         width: 700px;
         height: 100vh;
         border-collapse: collapse;
+        overflow-y: auto;
     }
     iframe{
         width: 100%;
@@ -89,6 +90,8 @@
         justify-items: center;
     }
     .a-ref:hover{
+        background-color: rgb(177, 23, 100);
+        color: #fff;
 
     }
     .main-ref{
@@ -99,7 +102,7 @@
         justify-items: center;
     }
     .img-bg{
-        max-height: fit-content;
+       height: 50px;
        object-fit: cover;
        width: 100%;
     }
