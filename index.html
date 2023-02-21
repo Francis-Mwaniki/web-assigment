@@ -4,16 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>My Site</title>
 </head>
+
 <body>
     <table border="1" >
         <tr>
-            <td>
-                <img src="./img/cute_mice.jpg" class="img" alt="">
-            </td>
-            <td>
-                <div style="background-image: url('https://cdn.pixabay.com/photo/2022/11/15/11/04/design-7593741__340.jpg'); height: 100px;"></div>
+            <th>   <div class="img-container">
+                <img class="img" src="https://cdn.pixabay.com/photo/2016/12/26/18/33/logo-1932539__340.png" style="height: 50px; width: 50px; border-radius: 999px;" alt="">
+            </div></th>
+      
+           <th > <a href="./sidebar.html"><h4>About</h4></a></th>
+        <th >    <a href="./content.html"><h4>Contact</h4></a></th>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <div class="slider">
+                    <div class="slider-container">
+                       
+                           
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2019/01/23/21/16/pixabay-3951079__340.png" alt="Vintage">
+                              <h3>Vintage</h3>
+                              <p>Photo by Jane Smith</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2013/10/25/17/26/tree-200795__340.jpg" alt="Concert">
+                              <h3>Concert</h3>
+                              <p>Photo by Bob Johnson</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2016/01/26/17/15/gmail-1162901__340.png" alt="Landscape">
+                              <h3>Landscape</h3>
+                              <p>Photo by Mary Williams</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2013/07/13/11/43/tux-158547__340.png" alt="Burger">
+                              <h3>Burger</h3>
+                              <p>Photo by Jack Anderson</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2015/02/02/23/58/sign-621746__340.png" alt="Tent">
+                              <h3>Tent</h3>
+                              <p>Photo by Sarah Davis</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2016/12/27/13/10/logo-1933884__340.png" alt="Beautiful">
+                              <h3>Beautiful</h3>
+                              <p>Photo by Alex Lee</p>
+                            </div>
+                            <div class="slider-item">
+                              <img src="https://cdn.pixabay.com/photo/2012/09/18/19/56/recycle-57136__340.jpg" alt="Tie">
+                              <h3>Tie</h3>
+                              <p>Photo by Emily Chen</p>
+                            </div>
+                         
+                    </div>
+                    <div class="slider-controls">
+                      <button class=" prev slider-control"><img class="img" src="https://img.icons8.com/external-kmg-design-glyph-kmg-design/32/null/external-left-arrows-kmg-design-glyph-kmg-design.png"/></button>
+                      <button class=" next slider-control"><img class="img" src="https://img.icons8.com/sf-black/64/null/long-arrow-right.png"/></button>
+                    </div>
+                  </div>
             </td>
         </tr>
       
@@ -42,6 +94,7 @@
            
        
     </table> 
+    <script src="./index.js"></script>
 </body>
 <style>
     table{
@@ -55,11 +108,7 @@
         height: 100%;
         border: none;
     }
-    .img{
-        height: 8vh;
-        width:10vh;
-        border-radius: 999px;
-    }
+   
     *{
         margin: 0;
         padding: 0;
@@ -101,10 +150,79 @@
         align-items: center;
         justify-items: center;
     }
-    .img-bg{
-       height: 50px;
-       object-fit: cover;
-       width: 100%;
-    }
+   
+
+    /* Slider */
+
+.slider {
+    position: relative;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+    height: 100%;
+    overflow: hidden;
+  }
+  .slider-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    max-width: 400px;
+    gap: 10px;
+  }
+  .slider-item {
+    flex: 0 0 100%;
+    width: 100%;
+    margin: 20;
+    height: 100%;
+    
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  :hover .slider-item {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+
+  }
+  .slider-controls {
+    margin: 10px;
+    position: absolute;
+    top: 50%;
+  
+    bottom: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .slider-control {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  .prev{
+background: transparent;
+border-radius: 999px;
+border: solid 2px #000;
+background:rgb(205, 205, 231);
+ color: white;
+  }
+  .next{
+    background: transparent;
+border-radius: 999px;
+border: solid 2px #000;
+ color: white;
+ background:rgb(205, 205, 231);
+
+  }
+
+  .img{
+    width:15px;
+    height:15px;
+  
+
+  }
 </style>
 </html>
